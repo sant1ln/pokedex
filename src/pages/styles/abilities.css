@@ -38,3 +38,16 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media screen and (max-width: 570px){
+    
+    .effects_container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .effect_container-card{
+        width: 90%;
+    }
+    
+}

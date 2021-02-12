@@ -20,3 +20,19 @@
 .pokecart_list_container a{
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 780px){
+    .pokecart_list_container{
+        width: 30%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 570px){
+.pokecart_list_container{
+    width: 40%;
+}
+}

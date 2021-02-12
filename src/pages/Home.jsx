@@ -16,7 +16,6 @@ export const Home = () => {
       <Helmet>
         <title>Pokedex</title>
       </Helmet>
-      <h2>Pokemons!!</h2>
       <div className="pokecarts_list">
         {listPokemons.map((item) => (
           <ListofPokecart key={item.name} url={item.url} />

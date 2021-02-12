@@ -12,3 +12,7 @@
     flex-wrap: wrap;
     width: 90%;
 }
+
+@media screen and (max-width: 570px){
+
+}

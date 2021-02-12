@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { ListofPokecart } from "../components/ListofPokecart";
 import { initalTypes } from "../initalState";
 import { getTypesByName } from "../services/getTypesbyName";
@@ -20,6 +21,9 @@ export const Types = (props) => {
   
   return (
     <div className="types_container">
+      <Helmet>
+        <title>Pokedex | {props.type.toUpperCase()}</title>
+      </Helmet>
     <h2 className="types_container-name">{props.type}</h2>
       <div className="damage_container" >
         <div className="types_contianer_damage from">

@@ -18,7 +18,7 @@ export const Pokemon = (props) => {
   return (
     <div className="datapokemon_container">
       <Helmet>
-        <title>Pokedex | {name}</title>
+        <title>Pokedex | {name.toUpperCase()}</title>
       </Helmet>
       {dataPokemon ? (
         <div className="datapokemon">

@@ -17,7 +17,7 @@ export const Abilities = (props) => {
   return (
     <div className="abilities_container">
       <Helmet>
-        <title>Pokedex | {props.name}</title>
+        <title>Pokedex | {props.name.toUpperCase()}</title>
       </Helmet>
       <h2 className="abilities_container-name">{props.name}</h2>
       <div className="effects_container">

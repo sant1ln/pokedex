@@ -42,12 +42,21 @@
 }
 
 .datapokemon-info-abilities{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-bottom: 2px solid var(--border_color);
 }
 
 .datapokemon-info-abilities a{
     text-decoration: none;
-    color: var(--secundary_font_color)
+    color: var(--secundary_font_color);
+}
+
+.datapokemon-info-abilities h4{
+    border: 1px solid var(--secundary_font_color);
+    width: 100%;
+    padding: 5px;
 }
 
 .datapokemon-info-others{
@@ -63,4 +72,32 @@
 
 .line{
     border-bottom: 2px solid var(--border_color);
+}
+
+
+
+@media screen and (max-width: 780px){
+     
+    .datapokemon{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .datapokemon-image{
+        
+        width: 100%;
+    }
+
+    .datapokemon-info{
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 570px){
+    
+  
 }
