@@ -1,0 +1,1 @@
+This is Pokedex wiki. a project to Mercado Virtual 
