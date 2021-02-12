@@ -1,19 +1,14 @@
+import React from "react";
 import { Link } from "@reach/router";
-import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { initialPokemon} from "../initalState";
-import { getPokemonsById } from "../services/getPokemonById";
-
+import { usePokemon } from "../hooks/usePokemon";
+import { Loading } from "../components/Loading";
 import "./styles/pokemon.css";
+import 'animate.css'
 
 export const Pokemon = (props) => {
-  const [dataPokemon, setDataPokemon] = useState(initialPokemon);
-  const { abilities, name, id, big_img, weight, height, types } = dataPokemon;
-  useEffect(async () => {
-    const URL = `https://pokeapi.co/api/v2/pokemon/${props.id}/`;
-    let Pokemon = await getPokemonsById(URL);
-    setDataPokemon(Pokemon);
-  }, []);
+  
+  const {dataPokemon,abilities, name, big_img, weight, height, types} = usePokemon(props)
 
   return (
     <div className="datapokemon_container">
@@ -21,7 +16,7 @@ export const Pokemon = (props) => {
         <title>Pokedex | {name.toUpperCase()}</title>
       </Helmet>
       {dataPokemon ? (
-        <div className="datapokemon">
+        <div className="datapokemon animate__animated animate__fadeInUp">
           <div className="datapokemon-image">
             <img src={big_img} className="image" />
           </div>
@@ -59,9 +54,8 @@ export const Pokemon = (props) => {
             </div>
           </div>
         </div>
-      ) : (
-        <h1>Empty :c</h1>
-      )}
+      ) :<Loading />
+      }
     </div>
   );
 };

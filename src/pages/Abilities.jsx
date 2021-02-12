@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { ListofPokecart } from "../components/ListofPokecart";
+import { useAbilities } from "../hooks/useAbilities";
 import { initialAbility } from "../initalState";
 import { getAbilityByName } from "../services/getAbilityByName";
 import "./styles/abilities.css";
 
 export const Abilities = (props) => {
-  const [ability, setAbility] = useState(initialAbility);
-  const { effects, pokemons } = ability;
+  
+  const {effects,pokemons} = useAbilities(props)
 
-  useEffect(async () => {
-    const pokemonAbility = await getAbilityByName(props.name);
-    setAbility(pokemonAbility);
-  }, []);
-  console.log(ability);
   return (
     <div className="abilities_container">
       <Helmet>

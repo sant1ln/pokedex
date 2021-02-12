@@ -1,30 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { ListofPokecart } from "../components/ListofPokecart";
+import { useTypes } from "../hooks/useTypes";
 import { initalTypes } from "../initalState";
 import { getTypesByName } from "../services/getTypesbyName";
 import "./styles/types.css";
 
 export const Types = (props) => {
-  const [types, setTypes] = useState(initalTypes);
-  const { damageFrom, damageTo, pokemons } = types;
   
-  useEffect(async () => {
-    const TYPES = await getTypesByName(props.type);
-    setTypes(TYPES);
-  }, []);
-
-  const handleType = (name) =>{
-    window.location.assign(`http://localhost:3000/type/${name}`)
-  }
-
+  const{damageFrom, damageTo, pokemons,handleType} = useTypes(props)
   
   return (
     <div className="types_container">
       <Helmet>
         <title>Pokedex | {props.type.toUpperCase()}</title>
       </Helmet>
-    <h2 className="types_container-name">{props.type}</h2>
+ 
+      <h2 className="types_container-name">{props.type}</h2>
       <div className="damage_container" >
         <div className="types_contianer_damage from">
           <div className="type weak">
