@@ -1,12 +1,14 @@
+import { Link } from "@reach/router";
 import React, { useEffect, useState } from "react";
-import { initialState } from "../initalState";
+import { Helmet } from "react-helmet";
+import { initialPokemon} from "../initalState";
 import { getPokemonsById } from "../services/getPokemonById";
 
 import "./styles/pokemon.css";
 
 export const Pokemon = (props) => {
-  const [dataPokemon, setDataPokemon] = useState(initialState);
-  const {abilities,name,id,big_img,weight,height,types} = dataPokemon
+  const [dataPokemon, setDataPokemon] = useState(initialPokemon);
+  const { abilities, name, id, big_img, weight, height, types } = dataPokemon;
   useEffect(async () => {
     const URL = `https://pokeapi.co/api/v2/pokemon/${props.id}/`;
     let Pokemon = await getPokemonsById(URL);
@@ -15,6 +17,9 @@ export const Pokemon = (props) => {
 
   return (
     <div className="datapokemon_container">
+      <Helmet>
+        <title>Pokedex | {name}</title>
+      </Helmet>
       {dataPokemon ? (
         <div className="datapokemon">
           <div className="datapokemon-image">
@@ -28,7 +33,9 @@ export const Pokemon = (props) => {
               <h3>Abilities</h3>
               {abilities.map(({ ability }) => (
                 <div className="datapokemon-info-ability" key={ability.name}>
-                  <h4>{ability.name}</h4>
+                  <Link to={`/ability/${ability.name}`}>
+                    <h4>{ability.name}</h4>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -36,7 +43,9 @@ export const Pokemon = (props) => {
               <h3>Types</h3>
               {types.map(({ type }) => (
                 <div className="datapokemon-info-ability" key={type.name}>
-                  <h4>{type.name}</h4>
+                  <Link to={`/type/${type.name}`}>
+                    <h4>{type.name}</h4>
+                  </Link>
                 </div>
               ))}
             </div>

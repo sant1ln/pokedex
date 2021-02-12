@@ -1,4 +1,4 @@
-export const initialState = {
+export const initialPokemon = {
     abilities: [],
     name:'',
     id:'',
@@ -6,4 +6,15 @@ export const initialState = {
     weight:'',
     height:'',
     types:[],
+}
+
+export const initialAbility = {
+    effects: [],
+    pokemons: []
+}
+
+export const initalTypes = {
+    damageFrom:[],
+    damageTo:[],
+    pokemons:[],
 }

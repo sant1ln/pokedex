@@ -4,6 +4,8 @@
   --secundary_font_color: #93c93d;
   --border_color: #a9adb423;
   --card_main_color: #24385b;
+  --weak_color: #e30713;
+  --strong_color: #17b928;
 }
 
 
@@ -12,6 +14,8 @@ body {
   padding: 0;
   width: 100%;
   font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--main_background_color);
   color: var(--main_font_color);
   font-family: 'Open Sans Condensed', sans-serif;

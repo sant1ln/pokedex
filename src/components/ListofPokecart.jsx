@@ -4,6 +4,7 @@ import { Pokecart } from "./Pokecart";
 import { getBasicPokemonsById } from "../services/getBasicPokemonbyId";
 
 export const ListofPokecart = (url) => {
+  
   const { url: urlParsed } = url;
   const [pokemon, setPokemons] = useState([]);
 

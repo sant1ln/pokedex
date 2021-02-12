@@ -3,6 +3,8 @@ import {Router} from '@reach/router'
 import './App.css';
 import { Pokemon } from './pages/Pokemon';
 import { Header } from './components/Header';
+import { Abilities } from './pages/Abilities';
+import { Types } from './pages/Types';
 
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <Router>
         <Home path="/" />
         <Pokemon  path="/pokemon/:id"/>
+        <Abilities path="/ability/:name"/>
+        <Types path="/type/:type" />
       </Router>
     </div>
   );

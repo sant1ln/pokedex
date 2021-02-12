@@ -1,13 +1,16 @@
 import React from "react";
-import { Link } from "@reach/router";
 import "./styles/pokecart.css";
 export const Pokecart = ({ img, name,id }) => {
+  const handleChange = () =>{
+    window.location.assign(`http://localhost:3000/pokemon/${id}`)
+  }
+
   return (
-    <Link to={`pokemon/${id}`}>
-      <div className="pockecart_container">
+    
+      <div onClick={handleChange} className="pockecart_container">
         <img src={img} alt="" />
         <h2>{name}</h2>
       </div>
-    </Link>
+    
   );
 };

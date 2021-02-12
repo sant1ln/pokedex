@@ -45,6 +45,11 @@
     border-bottom: 2px solid var(--border_color);
 }
 
+.datapokemon-info-abilities a{
+    text-decoration: none;
+    color: var(--secundary_font_color)
+}
+
 .datapokemon-info-others{
     display: flex;
     width: 100%;
