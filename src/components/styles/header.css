@@ -1,0 +1,26 @@
+.header_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    font-size: 1rem;
+    font-family: 'Squada One', cursive;
+    border-bottom: 1px solid var(--border_color);
+}
+
+
+.header_container a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--main_font_color)
+}
+.header_container a h1{
+    margin-right: 5%;
+}
+
+.header_container i{
+    font-size: 1.5rem;
+    color: var(--secundary_font_color)
+}

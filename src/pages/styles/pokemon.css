@@ -1,0 +1,56 @@
+.datapokemon_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.datapokemon{
+    display: flex;
+    width: 80%;
+    height: 400px;
+    background-color: var(--card_main_color);
+}
+
+.datapokemon-image{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--border_color);
+}
+
+.image{
+    width: 50%;
+}
+
+.datapokemon-info{
+    width: 60%;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.datapokemon-info-name{
+    background-color: var(--secundary_font_color);
+    height: 40px;
+}
+
+.datapokemon-info-name h2{
+    margin: 0;
+}
+
+.datapokemon-info-abilities{
+    border-bottom: 2px solid var(--border_color);
+}
+
+.datapokemon-info-others{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.datapokemon-info-others p{
+    font-size: 1.2rem;
+}

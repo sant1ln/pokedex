@@ -1,0 +1,22 @@
+.pokecart_list_container{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: 1.5px solid var(--card_main_color);
+    width: 20%;
+    height: 200px;
+    margin: 10px;
+    box-shadow: -9px 9px 13px -7px rgba(0,0,0,1);
+    transition: .5s all;
+}
+
+.pokecart_list_container:hover{
+    width: 20.8%;
+    height: 201px;
+    background-color: var(--card_main_color);
+} 
+
+
+.pokecart_list_container a{
+    text-decoration: none;
+}
