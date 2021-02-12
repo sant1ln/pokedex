@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { getPokemonsById } from "../services/getPokemonById";
 import "./styles/list_of_pokecart.css";
 import { Pokecart } from "./Pokecart";
+import { getBasicPokemonsById } from "../services/getBasicPokemonbyId";
+
 export const ListofPokecart = (url) => {
   const { url: urlParsed } = url;
   const [pokemon, setPokemons] = useState([]);
 
   useEffect(async () => {
-    let Pokemon = await getPokemonsById(urlParsed);
+    let Pokemon = await getBasicPokemonsById(urlParsed)
     
     setPokemons(Pokemon);
   }, []);

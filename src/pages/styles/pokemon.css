@@ -3,13 +3,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
+    
 }
 
 .datapokemon{
     display: flex;
     width: 80%;
-    height: 400px;
+    height: auto;
     background-color: var(--card_main_color);
 }
 
@@ -53,4 +54,8 @@
 
 .datapokemon-info-others p{
     font-size: 1.2rem;
+}
+
+.line{
+    border-bottom: 2px solid var(--border_color);
 }
