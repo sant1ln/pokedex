@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React  from "react";
 import { Helmet } from "react-helmet";
 import { ListofPokecart } from "../components/ListofPokecart";
 import { useTypes } from "../hooks/useTypes";
-import { initalTypes } from "../initalState";
-import { getTypesByName } from "../services/getTypesbyName";
 import "./styles/types.css";
 
 export const Types = (props) => {

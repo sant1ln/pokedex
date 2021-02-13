@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { ListofPokecart } from "../components/ListofPokecart";
 import { useAbilities } from "../hooks/useAbilities";
-import { initialAbility } from "../initalState";
-import { getAbilityByName } from "../services/getAbilityByName";
 import "./styles/abilities.css";
 
 export const Abilities = (props) => {
