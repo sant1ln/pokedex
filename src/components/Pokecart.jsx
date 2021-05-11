@@ -4,7 +4,7 @@ import 'animate.css'
 export const Pokecart = ({ img, name,id }) => {
   
   const handleChange = () =>{
-    window.location.assign(`http://localhost:3000/pokemon/${id}`)
+    window.location.assign(`https://pokedex-ca435.web.app/pokemon/${id}`)
   }
 
   return (
