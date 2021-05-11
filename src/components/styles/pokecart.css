@@ -1,5 +1,6 @@
 .pockecart_container{
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -7,7 +8,7 @@
 }
 
 .pockecart_container img{
-    width: 60%;
+    width: 50%;
 }
 
 
